@@ -54,9 +54,6 @@ Example configuration :
 {
   "Urls" : [ 
 	"https://asuswrt.lostrealm.ca/download",
-	"http://www2.meethue.com/en-us/release-notes/accessories",
-	"http://www2.meethue.com/en-us/release-notes/lamps",
-	"http://www2.meethue.com/en-us/release-notes/bridge",
 	"http://tim.blog/gear/"
   ],
   "Selectors" : {
@@ -68,7 +65,7 @@ Example configuration :
   "GenerateScreenshots" : true,
   "ScreenshotCommand" : "/usr/bin/docker run --rm -v ${cache}:/images kevinsimper/wkhtmltoimage --quality 75 --crop-h 720 --format jpg ${url} /images/${filename}.jpg",
   "NotificationMail" : { 
-	"template" : "templates/mail.tmpl",
+	"template" : "templates/multi-columns.tmpl",
 	"to" : "<recipient>@<domain.tld>",
 	"from" : "<sender>@<domain.tld>",
 	"subject" : "WatchThatPage results : {{ .NbDiff }} page(s) changed",
@@ -109,7 +106,7 @@ Example configuration :
 - **ScreenshotCommand** (optional, blank by default) : system command that will be executed in order to take screenshot of remote web pages. Examples may be :
 
 	- execution through docker : `/usr/bin/docker run --rm --name wkhtmltoimage -v ${cache}:/images kevinsimper/wkhtmltoimage --quality 75 --crop-h 720 --format jpg ${url} /images/${filename}.jpg` (may be used exactly like that)
-	- execution without docker : `wkhtmltoimage --quality 75 --crop-h 720 --format jpg ${url} <absolute-path-to-cache-directorty>/${filename}.jpg` (cache path has to be customized)
+	- execution without docker : `wkhtmltoimage --quality 75 --crop-h 720 --format jpg ${url} <absolute-path-to-cache-directory>/${filename}.jpg` (cache path has to be customized)
 	
 ### Template
 
