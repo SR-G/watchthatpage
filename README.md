@@ -103,7 +103,7 @@ Example configuration :
 	- **SelectorsToSkip** (optional, list of string) : list of entries to remove
 
 - **GenerateScreenshots** : (optional, false by default) should screenshots be generated or not - next parameter must then be configured
-- **ScreenshotCommand** (optional, blank by default) : system command that will be executed in order to take screenshot of remote web pages. Examples may be :
+- **ScreenshotCommand** (optional, blank by default) : system command that will be executed in order to take screenshot of remote web pages. Variables like `${url}`, `${cache}`, `${filename}` will be injected at running time and needs thus to be entered exactly like this in the JSON configuration. Examples may be :
 
 	- execution through docker : `/usr/bin/docker run --rm --name wkhtmltoimage -v ${cache}:/images kevinsimper/wkhtmltoimage --quality 75 --crop-h 720 --format jpg ${url} /images/${filename}.jpg` (may be used exactly like that)
 	- execution without docker : `wkhtmltoimage --quality 75 --crop-h 720 --format jpg ${url} <absolute-path-to-cache-directory>/${filename}.jpg` (cache path has to be customized)
