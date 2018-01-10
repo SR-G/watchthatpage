@@ -29,15 +29,16 @@ Example of output :
 
 ```bash
 Configuration file found under [watchthatpage.json], now loading content
-Configuration loaded with [3] urls, gzip [false], minify [true], sections to skip [script footer meta style map img form noscript]
-Now parsing URL [http://tim.blog/gear/]
-Now parsing URL [http://www2.meethue.com/en-us/release-notes/]
-Now parsing URL [https://asuswrt.lostrealm.ca/download]
+Configuration loaded with [3] urls, gzip [false], minify [true], auto backup [true], generate screenshots [true], sections to skip [script footer meta style map img nav select form noscript]
+Now parsing URL [https://www.bostonglobe.com/news/bigpicture]
+Now parsing URL [https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal]
+Now parsing URL [https://news.google.com/news/?ned=fr&gl=FR&hl=fr]
 Results : 
-  - [SAME]  URL [http://tim.blog/gear/], analysis took [11.406343303s], cached content [cache/7d26b4e41593c053716336bf6065a406]
-  - [SAME]  URL [http://www2.meethue.com/en-us/release-notes/], analysis took [1.480153854s], cached content [cache/d3a7f50aca19de21dd5632b4c73c0a85]
-  - [SAME]  URL [https://asuswrt.lostrealm.ca/download], analysis took [1.012145217s], cached content [cache/7a878332a6d26d3864f09cd52dd35994]
-Total execution time [12.364408317s], analyzed urls [3], errors [0], diffs [0]
+  - [DIFF]  URL [https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal], analysis took [11.884853454s], cached content [/mnt/internal/sata/downloads/downloaded/workspaces/go/watchthatpage/bin/linux/cache//3f7b7021cd0f50958448273113c2ea1e]
+  - [DIFF]  URL [https://news.google.com/news/?ned=fr&gl=FR&hl=fr], analysis took [18.044830746s], cached content [/mnt/internal/sata/downloads/downloaded/workspaces/go/watchthatpage/bin/linux/cache//f3f1bce5db55b5e02b1479de568b0128]
+  - [DIFF]  URL [https://www.bostonglobe.com/news/bigpicture], analysis took [22.10838874s], cached content [/mnt/internal/sata/downloads/downloaded/workspaces/go/watchthatpage/bin/linux/cache//ee545bc3b80dc0cd684453067b12527a]
+Total execution time [22.10883423s], analyzed urls [3], errors [0], diffs [3]
+Notifications to [......@gmail.com], from [webmaster@domain.tld], server [smtp.gmail.com:587], template [.../templates/multi-columns.tmpl]
 (...)
 ```
 
