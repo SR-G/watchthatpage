@@ -1,0 +1,36 @@
+{
+  "Urls" : [ 
+	"https://asuswrt.lostrealm.ca/download",
+	"http://tim.blog/gear/"
+  ],
+  "Selectors" : {
+  },
+  "LogLevel" : "INFO",
+  "Gzip" : false,
+  "AutoBackup" : true,
+  "MinifyHTML" : true,
+  "NotificationMail" : { 
+	"template" : "templates/multi-columns.tmpl",
+	"to" : "account@domain.tld",
+	"from" : "account@domain.tld",
+	"subject" : "WatchThatPage results : {{ .NbDiff }} page(s) changed",
+	"smtp-hostname" : "smtp.gmail.com",
+	"smtp-tls" : true,
+	"smtp-port" : 587,
+	"smtp-login" : "account@domain.tld",
+	"smtp-password" : "password"
+  }
+  ,
+  "SectionsToSkip" : [ 
+    "script", 
+	"footer", 
+	"meta", 
+	"style", 
+	"map",
+	"img",
+	"nav",
+	"select",
+	"form",
+	"noscript"
+  ]
+}

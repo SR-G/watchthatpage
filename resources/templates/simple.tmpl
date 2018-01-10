@@ -1,0 +1,19 @@
+<html>
+
+<body>
+  <p>
+    On {{ .Date }}, {{ .NbUrls }} URLs have been analyzed - {{ .NbErrors }} error(s), {{ .NbDiff }} difference(s), execution time {{ .ExecutionTime }}.<br />
+  </p>
+
+  <p>
+    List of found differences :
+  </p>
+  <ul>
+    {{ range .Results }} {{ if .HasDifferences }}
+    <li><a href="{{ .URL }}" target="_blank">{{ .URL }}</a></li>
+    {{ end }} {{ end }}
+  </ul>
+
+</body>
+
+</html>

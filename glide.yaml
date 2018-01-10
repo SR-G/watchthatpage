@@ -1,0 +1,38 @@
+package: .
+import:
+- package: github.com/mattn/go-colorable
+  version: v0.0.7
+- package: github.com/mattn/go-isatty
+  version: v0.0.2
+- package: github.com/russross/blackfriday
+  version: v1.4
+- package: go4.org
+  subpackages:
+  - syncutil/singleflight
+- package: golang.org/x/oauth2
+  subpackages:
+  - google
+- package: google.golang.org/api
+  subpackages:
+  - compute/v1
+- package: google.golang.org/appengine
+  version: v1.0.0
+  subpackages:
+  - datastore
+  - log
+  - memcache
+  - urlfetch
+  - user
+testImport:
+- package: github.com/cheekybits/is
+- package: github.com/davecgh/go-spew
+  version: v1.1.0
+  subpackages:
+  - spew
+- package: github.com/stretchr/testify
+  version: v1.1.4
+  subpackages:
+  - assert
+  - require
+- package: github.com/tdewolff/test
+- package: gopkg.in/check.v1
