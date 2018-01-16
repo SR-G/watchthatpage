@@ -1,0 +1,33 @@
+{
+  "Urls" : [ 
+    "https://www.google.com"
+  ],
+  "CacheDirectory": "/data",
+  "LogLevel" : "INFO",
+  "Gzip" : false,
+  "MinifyHTML" : true,
+  "GenerateScreenshots" : true,
+  "ScreenshotCommand" : "/usr/bin/xvfb-run --auto-servernum wkhtmltoimage --quality 75 --crop-h 720 --format jpg ${url} /data/${filename}.jpg",
+  "NotificationMail" : { 
+	"template" : "/resources/templates/multi-columns.tmpl",
+	"to" : "",
+	"from" : "",
+	"subject" : "WatchThatPage results : {{ .NbDiff }} page(s) changed",
+	"smtp-hostname" : "",
+	"smtp-tls" : true,
+	"smtp-port" : 587,
+	"smtp-login" : "",
+	"smtp-password" : ""
+  }
+  ,
+  "SectionsToSkip" : [ 
+	"script", 
+	"footer", 
+	"meta", 
+	"style", 
+	"map",
+	"img",
+	"form",
+	"noscript"
+  ]
+}
