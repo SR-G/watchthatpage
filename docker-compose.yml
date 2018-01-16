@@ -1,0 +1,7 @@
+version: "3"
+services:
+  watchthatpage:
+    build: .
+    volumes:
+      - ./data:/data
+      - ./config.example.json:/watchthatpage.json:ro
