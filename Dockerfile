@@ -19,7 +19,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
 COPY resources /resources
 COPY --from=builder /go/bin/watchthatpage /bin/watchthatpage
 
-RUN echo "0 1 * * * cd / && watchthatpage grab > /proc/1/fd/1 2> /proc/1/fd/2" | crontab -
+RUN echo "0 * * * * cd / && watchthatpage grab > /proc/1/fd/1 2> /proc/1/fd/2" | crontab -
 
 ENTRYPOINT ["/init"]
 CMD ["cron", "-f"]
