@@ -7,7 +7,7 @@
   "Gzip" : false,
   "MinifyHTML" : true,
   "GenerateScreenshots" : true,
-  "ScreenshotCommand" : "/usr/bin/xvfb-run wkhtmltoimage --quality 75 --crop-h 720 --format jpg ${url} /data/${filename}.jpg",
+  "ScreenshotCommand" : "/usr/bin/xvfb-run --auto-servernum wkhtmltoimage --quality 75 --crop-h 720 --format jpg ${url} /data/${filename}.jpg",
   "NotificationMail" : { 
 	"template" : "/resources/templates/multi-columns.tmpl",
 	"to" : "",

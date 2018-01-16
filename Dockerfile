@@ -2,7 +2,6 @@ FROM golang as builder
 
 COPY . /go/
 RUN go get -d ./...
-RUN go install tensin.org/watchthatpage
 RUN go install -ldflags "-d -s -w -X tensin.org/watchthatpage/core.Build=`git rev-parse HEAD`" -a -tags netgo -installsuffix netgo tensin.org/watchthatpage
 
 ######################################
